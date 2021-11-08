@@ -10,15 +10,7 @@
 			<h5>Customer </h5>
 			<hr>
 			<a class="btn btn-outline-info  btn-sm btn-block" href="">Update Customer</a><br>
-			<a class="btn btn-outline-danger  btn-sm btn-block" href="">Delete Customer</a>
-
-		</div>
-	</div>
-
-	<div class="col-md">
-		<div class="card card-body">
-			<h5>Contact Information</h5>
-			<hr>
+			<a class="btn btn-outline-info  btn-sm btn-block" href="{% url 'createorder' customer.id %}">Create Order </a>
 			<p>Email  - {{customer.email}}</p>
 			<p>Phone - {{customer.phone}}</p>
 		</div>
@@ -39,7 +31,7 @@
 	<div class="col">
 		<div class="card card-body">
 			<form method="get">
-
+				{{Filter.form}}
 		    <button class="btn btn-primary" type="submit">Search</button>
 		  </form>
 		</div>
@@ -67,9 +59,9 @@
 					<td>{{order.product.category}}</td>
 					<td>{{order.date_created}}</td>
 					<td>{{order.status}}</td>
-					<td><a class="btn btn-sm btn-info" href="">Update</a></td>
-					<td><a class="btn btn-sm btn-danger" href="">Remove</a></td>
-				</tr>
+					<td><a class="btn btn-sm btn-info" href="{% url 'updateorder' order.id %}" >Update</a></td>
+				    <td><a class="btn btn-sm btn-danger" href="{% url 'deleteorder' order.id %}">Remove</a></td>
+			    </tr>
 				{% endfor %}
 
 			</table>
