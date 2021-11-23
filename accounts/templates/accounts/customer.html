@@ -10,7 +10,7 @@
 			<h5>Customer </h5>
 			<hr>
 			<a class="btn btn-outline-info  btn-sm btn-block" href="">Update Customer</a><br>
-			<a class="btn btn-outline-info  btn-sm btn-block" href="{% url 'createorder' customer.id %}">Create Order </a>
+			<a class="btn btn-outline-info  btn-sm btn-block" href="{% url 'create_order' customer.id %}">Create Order </a>
 			<p>Email  - {{customer.email}}</p>
 			<p>Phone - {{customer.phone}}</p>
 		</div>
@@ -59,7 +59,7 @@
 					<td>{{order.product.category}}</td>
 					<td>{{order.date_created}}</td>
 					<td>{{order.status}}</td>
-					<td><a class="btn btn-sm btn-info" href="{% url 'updateorder' order.id %}" >Update</a></td>
+					<td><a class="btn btn-sm btn-info" href="{% url 'update_order' order.id %}">Update</a></td>
 				    <td><a class="btn btn-sm btn-danger" href="{% url 'deleteorder' order.id %}">Remove</a></td>
 			    </tr>
 				{% endfor %}

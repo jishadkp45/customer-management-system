@@ -5,21 +5,27 @@
 
 		body{
 			background-color: #ebeff5;
+			
+			padding: 7px;
             
 		}
 
 
 		#total-orders{
-			background-color: #0a703d;
+			
+			background: rgb(0,0,0);
+			background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(247,9,66,1) 50%, rgba(11,11,11,1) 100%);
 		}
 
 
 		#orders-delivered{
-			background-color: #13745b;
+			background: rgb(77,11,63);
+			background: linear-gradient(90deg, rgba(77,11,63,1) 0%, rgba(255,79,21,1) 50%, rgba(105,20,87,1) 100%);
 		}
 
 		#orders-pending{
-			background-color: #1f6b6b;
+			background: rgb(0,0,0);
+			background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(18,253,167,1) 50%, rgba(0,0,0,1) 100%);
 		}
 
 
